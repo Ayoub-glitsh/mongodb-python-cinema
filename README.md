@@ -15,21 +15,17 @@ It uses the Python library **PyMongo** to manage MongoDB data.
 Install PyMongo:
 
 ```bash
-pip install pymongo
+python -m pip install pymongo
 ```
 
-Optional (for secure credentials management):
 
-```bash
-pip install python-dotenv
-```
 
 ---
 
 ## ⚡ Project Structure
 
 - `script.py` : Main Python script with all CRUD operations.
-- `.env` : Optional file to store database credentials (should be added to `.gitignore`).
+
 
 ---
 
@@ -59,8 +55,9 @@ Example connection (replace with your credentials):
 
 ```python
 from pymongo import MongoClient
-
-client = MongoClient("mongodb://Ayoub:123456@localhost:27017/?authSource=admin")
+# Generic MongoDB connection string
+# Replace the values with your own if testing locally
+client = MongoClient("mongodb://testuser:testpass@127.0.0.1:27017/?authSource=admin")
 db = client["cinema"]
 ```
 
